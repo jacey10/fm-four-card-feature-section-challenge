@@ -17,7 +17,7 @@ This is a solution to the [Four card feature section challenge on Frontend Mento
 ## Overview
 
 ### Screenshot
-![](./assets/images/FireShot%20Capture%20021%20-%20Frontend%20Mentor%20-%20Four%20card%20feature%20section%20-%20[127.0.0.1].png)
+![](./assets/images/FireShot%20Capture%20022%20-%20Frontend%20Mentor%20-%20Four%20card%20feature%20section%20-%20[127.0.0.1].png)
 
 
 ### Links
