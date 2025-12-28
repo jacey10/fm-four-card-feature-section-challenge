@@ -91,6 +91,7 @@ textarea, select {
   --clr-grey-400: hsl(212, 6%, 44%);
   --clr-grey-500: hsl(234, 12%, 34%);
   --clr-light-gray: hsl(0, 0%, 98%);
+  --clr-gray: hsl(0, 0%, 86%);
 
   /* == Fonts ==*/
 
@@ -125,8 +126,6 @@ main{
 header {
   display: grid;
   place-items: center;
-  margin-block-start: 2rem;
-  margin-block-end: 1rem;
   text-align: center;
 }
 
@@ -169,7 +168,7 @@ header {
   padding: 2rem 1.5rem 2.5rem;
   border-radius: 0.8rem;
   border: 1px solid var(--clr-light-gray);
-  box-shadow: 3px 9px 12px hsl(0, 0%, 86%);
+  box-shadow: 3px 9px 12px var(--clr-gray);
 }
 
 .cyan-card::before, .orange-card::before, .red-card::before, .blue-card::before {
@@ -231,6 +230,8 @@ header {
   header {
     display: block;
     text-align: center;
+    margin-block-start: 0;
+    margin-block-end: 0;
   }
 
   .main__description {
@@ -242,7 +243,6 @@ header {
     display: grid;
     place-items: center;
     grid-template-columns: repeat(3, 1fr);
-    grid-row: repeat(2, 1fr);
     gap: 0 -1rem;
   }
 
@@ -256,7 +256,6 @@ header {
   .red-card {
     grid-column: 2;
     grid-row: 1;
-    margin-top: -0.5rem;
   }
 
   .orange-card {
@@ -268,7 +267,6 @@ header {
     grid-column: 3;
     grid-row: 1 / -1;
     transform: translateY(50%);
-    margin-inline-end: 2rem;
   }
 
   .card-title {
