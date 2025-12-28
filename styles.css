@@ -1,0 +1,279 @@
+/* poppins-200 - latin */
+@font-face {
+  font-family: 'Poppins';
+  src: url('assets/fonts/poppins-v24-latin-200.woff2') format('woff2'); 
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap; 
+}
+
+/* poppins-regular - latin */
+@font-face {
+  font-family: 'Poppins';
+  src: url('assets/fonts/poppins-v24-latin-regular.woff2') format('woff2'); 
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap; 
+}
+
+/* poppins-600 - latin */
+@font-face {
+  font-family: 'Poppins';
+  src: url('assets/fonts/poppins-v24-latin-600.woff2') format('woff2'); 
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+/*--CSS RESET--*/
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  height: 100%;
+}
+
+/* Remove list styles on ul, ol elements */
+ul, ol {
+  list-style: none;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4 {
+  text-wrap: balance;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+:root {
+  /*== Color Pallette==*/
+
+  /* Primary Colors */
+  --clr-red: hsl(0, 78%, 62%);
+  --clr-cyan: hsl(180, 62%, 55%);
+  --clr-orange: hsl(34, 97%, 64%);
+  --clr-blue: hsl(212, 86%, 64%);
+
+  /* Neutral Colors */
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-grey-400: hsl(212, 6%, 44%);
+  --clr-grey-500: hsl(234, 12%, 34%);
+  --clr-light-gray: hsl(0, 0%, 98%);
+
+  /* == Fonts ==*/
+
+  /* Font family */
+  --ff-body: 'Poppins', sans-serif;
+
+  /* Font weights */
+  --fw-light: 200;
+  --fw-medium: 400;
+  --fw-bold: 600;
+
+  /* Font sizes */
+  --fs-normal: 0.9375rem;
+  --fs-smaller: 0.8rem;
+}
+
+body {
+  width: 100%;
+  min-height: 100svh;
+  background-color: var(--clr-light-gray);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--ff-body);
+  font-size: var(--fs-normal);
+}
+
+main{
+  width: 86%;
+}
+
+header {
+  display: grid;
+  place-items: center;
+  margin-block-start: 2rem;
+  margin-block-end: 1rem;
+  text-align: center;
+}
+
+.main__intro {
+  color: var(--clr-grey-400);
+  font-size: clamp(1.5rem, 2.5vw, 3rem);
+  margin-block-end: 0.2rem;
+  font-weight: var(--fw-light);
+}
+
+.main__heading {
+  color: var(--clr-grey-500);
+  font-size: clamp(1.5rem, 2.5vw, 3rem);
+  font-weight: var(--fw-bold);
+  margin-block-end: 1rem;
+}
+
+.main__description {
+  color: var(--clr-grey-400);
+  font-weight: var(--fw-medium);
+  align-items: center;
+  margin-block-end: clamp(0.2rem, 2vw, 1rem);
+}
+
+.main__section--cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cards {
+  width: 90%;
+  box-sizing: border-box;
+  background-color: var(--clr-white);
+  font-weight: var(--fw-light);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 0.5rem;
+  padding: 1.5rem 1.5rem 2.5rem;
+  border-radius: 0.8rem;
+  border: 1px solid var(--clr-light-gray);
+  box-shadow: 3px 9px 12px hsl(0, 0%, 86%);
+}
+
+.cyan-card::before, .orange-card::before, .red-card::before, .blue-card::before {
+  content: "";
+  display: block;
+  height: 0.25rem;
+  margin: -1.47rem -1.38rem 0.8rem;
+  border-radius: 0.56rem 0.56rem 0 0;
+}
+
+.cyan-card::before {
+  background: var(--clr-cyan);
+}
+
+.red-card::before {
+  background: var(--clr-red);
+}
+
+.orange-card::before {
+  background: var(--clr-orange);
+}
+
+.blue-card::before {
+  background: var(--clr-blue);
+}
+
+.cards h2 {
+  color: var(--clr-grey-500);
+}
+
+.cards p {
+  color: var(--clr-grey-400);
+  font-size: var(--fs-smaller);
+  font-weight: var(--fw-medium);
+  line-height: 1.4;
+}
+
+.icons {
+  height: 3rem;
+  width: 3rem;
+  align-self: flex-end;
+  margin-block-start: 0.9rem;
+}
+
+@media screen and (min-width:48rem) {
+
+  main {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-block-end: 2.5rem;
+  }
+
+  header {
+    display: block;
+    text-align: center;
+    margin: 2.5rem auto 1.5rem;
+  }
+
+  .main__description {
+    font-size: var(--fs-normal);
+    width: clamp(32rem, 20vw, 44rem);
+  }
+
+  .main__section--cards {
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row: repeat(2, 1fr);
+    gap: 0 -1rem;
+  }
+
+  .cyan-card {
+    grid-column: 1;
+    grid-row: 1 / -1;
+    transform: translateY(50%);
+    margin-inline-start: 2rem;
+  }
+
+  .red-card {
+    grid-column: 2;
+    grid-row: 1;
+    margin-top: -0.5rem;
+  }
+
+  .orange-card {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .blue-card {
+    grid-column: 3;
+    grid-row: 1 / -1;
+    transform: translateY(50%);
+    margin-inline-end: 2rem;
+  }
+
+  .card-title {
+    margin-block-end: 0.6rem;
+  }
+
+  .card-description {
+    font-size: 0.85rem;
+  }
+}
