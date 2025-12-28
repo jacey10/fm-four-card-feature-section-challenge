@@ -225,10 +225,9 @@ header {
   margin-block-start: 0.9rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
+@media (prefers-reduced-motion: reduce) {
   .cards {
     transition: none;
-    transform: none;
   }
 }
 
