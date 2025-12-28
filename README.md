@@ -11,6 +11,7 @@ This is a solution to the [Four card feature section challenge on Frontend Mento
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
+  - [Acknowledment] (#acknowledgements)
 
 
 ## Overview
@@ -20,8 +21,8 @@ This is a solution to the [Four card feature section challenge on Frontend Mento
 
 
 ### Links
-- Solution URL: (https://github.com/jacey10/fm-recipe-page-challenge)
-- Live Site URL: (https://jacey10.github.io/fm-recipe-page-challenge/)
+- Solution URL: (https://github.com/jacey10/fm-four-card-feature-section-challenge)
+- Live Site URL: (https://jacey10.github.io/fm-four-card-feature-section-challenge/)
 
 ## My process
 
@@ -34,34 +35,27 @@ This is a solution to the [Four card feature section challenge on Frontend Mento
 
 
 ### What I learned
-- I had a better understanding of how to use flexbox to create responsive layouts and where to use it.
-- I haven't really worked with lists and tables in a long time. Neither did I have fully understand how to style them. While doing so, I stumbled on some problems like choosing the right border-bottom for the table and styling markers for list. This challenge gave me the opportunity to learn a lot more about how to do all these.
-- I had a better understanding of "width:100%" and how elements with this property expands to fill the width of their containers.
-- I implemented the mobile first design, before writing media queries for larger screens (i.e. tablets and desktops).
-- With the aid of ChatGPT, I learned how to use customers markers instead of default list markers to avoid layout issues.
+- I've worked with Grid before but that was for a 2 column layout. This four card feature section challenge helped me learn and understand grid row and grid column very well. Also, I used a wrong css grid property (grid-area) to position the third/orange card below the red card in the middle column. Even though it worked, I learnt that it was wrong and the reason why it worked was because of "grid-auto-placement", where browsers automatically position grid items into the first available space. So, I used the right properties instead, i.e., gird column and grid row.
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
+- I struggled with centering the cyan and blue card (which are in the first and third column respectively) vertically in their cell. So. I used this instead;
+
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+.cyan-card, .blue-card {
+  transform: translateY(50%);
 }
 ```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
+
+and it worked well.
+
+- Initially, I gave the cards height and width (using css clamp function) but realised that the layout didn't look good visually. So, I looked up someone's solution and noticed they never used any height or width, and yet their site was responsive. I did the same thing thing and everything was perfect. Using flexible unit for grid-template-column allows me to distribute available free space within the grid container among the columns and rows. The grids (and the cards) were automatically responsive.
+
 
 ### Continued development
 - I would continue to explore how to create layouts that are responsive across many screens and devices.
-- I would learn more about styling lists and tables.
-- I would also learn more about using Absolute positioning.
+
 
 ### Useful resources
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+I used ChatGPT for simple suggestions. For example, I learned using ChatGPT that it isn't wrong to have a paragraph of text above h1 heading.
 
 
 ## Author
@@ -69,5 +63,11 @@ const proudOfThisFunc = () => {
 - Frontend Mentor - [@jacey10](https://www.frontendmentor.io/profile/jacey10)
 - Twitter - [@jacey_opara](https://x.com/jacey_opara)
 
+
 ## Acknowledgments
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
+- I mentioned above that I looked up someone's solution when I got stuck trying to make my grid layout responsive and realised that he never gave any height or width to the cards and his project was perfect. I did the same and mine was perfect too. This is the link to  his repo:
+
+[Nathan's Solution](https://github.com/Nathan-Front/four-card-feature-section-master)
+
+
+
