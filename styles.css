@@ -245,7 +245,7 @@ header {
   header {
     display: block;
     text-align: center;
-    margin-block-end: 2rem;
+    margin-block-end: 1rem;
   }
 
   .main__description {
