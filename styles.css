@@ -245,7 +245,7 @@ header {
   header {
     display: block;
     text-align: center;
-    margin-block-start: 0.5rem;
+    margin-block-start: 1rem;
     margin-block-end: 2rem;
   }
 
@@ -268,7 +268,7 @@ header {
   .cyan-card {
     grid-column: 1;
     grid-row: 1 / -1;
-    transform: translateY(50%);
+    transform: translateY(60%);
   }
 
   .red-card {
@@ -284,7 +284,7 @@ header {
   .blue-card {
     grid-column: 3;
     grid-row: 1 / -1;
-    transform: translateY(50%);
+    transform: translateY(60%);
   }
 
   .card-title {
