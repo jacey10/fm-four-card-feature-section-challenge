@@ -261,7 +261,7 @@ header {
   }
 
   .cards {
-    min-width: 14rem;
+    width: clamp(14.5rem, 30vw, 22rem);
   }
 
   .cyan-card {
