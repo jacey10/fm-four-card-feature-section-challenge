@@ -258,7 +258,7 @@ header {
     display: grid;
     place-items: center;
     grid-template-columns: repeat(3, 1fr);
-    gap: 0.5rem;
+    gap: 1rem 0.7rem;
   }
 
   .cards {
